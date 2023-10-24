@@ -1,0 +1,235 @@
+####################################################
+####################################################
+#
+# HyT-Control inputfile: paramname = value
+#
+####################################################
+####################################################
+#
+####################################################
+# Trigger Control
+#
+# u can add the channels in the same pattern
+# up to 18 channels
+# commented lines begin with a '#'
+####################################################
+#
+T2jumpfile = ./input/T2jump.out
+#
+# 		channel 1
+ch1b = T0
+ch1t1 = 400
+ch1u1= us
+ch1e = 1b
+ch1t2 = 100
+ch1u2 = us
+ch1pulse = normal pulse
+ch1freq = 10
+ch1trig = Positive
+ch1cb = True
+#
+#		channel 2
+ch2b = 3b
+ch2t1 = -280
+ch2u1= us
+ch2e = 2b
+ch2t2 = 10
+ch2u2 = us
+ch2pulse = normal pulse
+ch2freq = 10
+ch2trig = Negative
+ch2cb = True
+#
+#		channel 3
+ch3b = 4b
+ch3t1 = 2070
+ch3u1= us
+ch3e = 3b
+ch3t2 = 10
+ch3u2 = us
+ch3pulse = normal pulse
+ch3freq = 10
+ch3trig = Negative
+ch3cb = True
+#
+#		channel 4
+ch4b = 1b
+ch4t1 = 110
+ch4u1= us
+ch4e = 4b
+ch4t2 = 10
+ch4u2 = us
+ch4pulse = normal pulse
+ch4freq = 10
+ch4trig = Positive
+ch4cb = True
+#
+#		channel 5
+ch5b = 3b
+ch5t1 = -5
+ch5u1= us
+ch5e = 5b
+ch5t2 = 10
+ch5u2 = us
+ch5pulse = normal pulse
+ch5freq = 10
+ch5trig = Positive
+ch5cb = True
+#
+#		channel 6
+ch6b = 4b
+ch6t1 = 476
+ch6u1= us
+ch6e = 3b
+ch6t2 = -5
+ch6u2 = us
+ch6pulse = burst unit decelerator (+)
+ch6freq = 10
+ch6trig = Positive
+ch6cb = True
+#
+#		channel 7
+ch7b = 6b
+ch7t1 = 0
+ch7u1= us
+ch7e = 3b
+ch7t2 = -5
+ch7u2 = us
+ch7pulse = burst unit decelerator (-)
+ch7freq = 10
+ch7trig = Positive
+ch7cb = True
+#
+#		channel 8
+ch8b = 4b
+ch8t1 = 3676.3
+ch8u1= us
+ch8e = 8b
+ch8t2 = 390
+ch8u2 = us
+ch8pulse = normal pulse
+ch8freq = 10
+ch8trig = Positive
+ch8cb = False
+#
+#
+####################################################
+# LeCroy Scope settings
+####################################################
+#
+interpolatetype = 0
+# enhancerestype: noisefilter
+enhancerestype = 0
+invert = True
+probeattenuation = 1
+bandwidth = OFF
+tracemode = ON
+#
+timebase = 4e-7
+timebase_unit = us
+timeoffset = -7.8e-6
+offset_unit = us
+#averages = 30
+scope_ip = 131.152.105.186
+scope_display = True
+#
+# the sweeps parameter is the actual number of parameters
+sweeps = 10
+#
+numberofsegments = 10
+samplemode = Sequence
+#
+# verticalcoupling 0: A1M, 1: D1M, 2: D50, 3: GND, 4: DC, 5: AC
+# samplemode 0: RealTime, 1: RIS, 2: Sequence, 3: Roll, 4: WaveStream
+#
+ch1_verticaloffset = 0.0
+ch1_verticalcoupling = D50
+ch1_verticalrange = 10.0
+#
+trig_level = 2.5
+trig_source = 4
+trig_type = EDGE
+trig_edge = Rising
+trig_slope = POS
+holdvalue1 = 4e-9
+holdvalue2 = 6e-9
+qualifiersource = 2
+holdtype = TI
+#
+active_channels = 4 channels [5GS/s]
+sample_mode = sequence
+noise_filter = None
+max_sample = 5e6
+#
+ch1_ch = ch1
+ch2_ch = ch2
+ch3_ch = ch3
+ch4_ch = ch4
+#
+ch1_invert = True
+ch2_invert = False
+#
+ch1_coupling = DC 50 Ohm
+ch2_coupling = DC 50 Ohm
+ch3_coupling = DC 50 Ohm
+ch4_coupling = DC 50 Ohm
+#
+scale_unit = V
+ch1_scale = 50e-3
+ch2_scale = 50e-3
+ch3_scale = 50e-3
+ch4_scale = 50e-3
+#
+ch1_cb = True
+ch2_cb = False
+ch3_cb = False
+ch4_cb = False
+#
+####################################################
+# PULSARE pulsed laser
+####################################################
+#
+pulsare_ipadress = 131.152.105.89
+pulsare_port = 65510
+wavelength = 17734.90
+#
+#
+####################################################
+# SPINCORE pulse blaster settings
+####################################################
+#
+# clock in Hz
+pb_clock=16e6
+#
+#
+####################################################
+# Scan window settings
+####################################################
+#
+bg_mode = None
+scan_ch = 3b
+rel_ch = 4b
+#
+scan_start = 1700
+scan_start_unit = us
+scan_stop = 2500
+scan_stop_unit = us
+scan_step = 3
+#
+bg_ch = ch1
+signal_ch = channel 1
+reference_ch = channel 1
+#
+wlscan_start = 0
+wlscan_stop = 0
+wl_unit = cm-1
+#
+wl_step = 0
+#
+scan_directory = C:\\Users\Gruppe Willitsch\Desktop\data
+scan_file = 0703001
+scan_filetype = txt
+#
+mode = fundamental
+#
+# this is the end of the input file (do not remove)

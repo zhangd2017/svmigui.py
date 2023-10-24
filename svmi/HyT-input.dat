@@ -1,0 +1,228 @@
+####################################################
+####################################################
+#
+# HyT-Control inputfile: paramname = value
+#
+####################################################
+####################################################
+#
+####################################################
+# Trigger Control
+#
+# u can add the channels in the same pattern
+# up to 12 channels
+# commented lines begin with a '#'
+####################################################
+
+#
+T2jumpfile = C:/Users/Gruppe Willitsch/Desktop/data/01032018/01032018-425-425-0deg-478p56-0deg-10kv/T2jump.out
+# 		channel 1
+ch1b = T0
+ch1t1 = 400
+ch1u1 = us
+ch1e = 1b
+ch1t2 = 100
+ch1u2 = us
+ch1pulse = normal pulse
+ch1freq = 10
+ch1trig = Positive
+ch1cb = False
+#
+#		channel 2
+ch2b = 3b
+ch2t1 = -265
+ch2u1= us
+ch2e = 2b
+ch2t2 = 10
+ch2u2 = us
+ch2pulse = normal pulse
+ch2freq = 10
+ch2trig = Positive
+ch2cb = False
+#
+#		channel 3
+ch3b = 4b
+ch3t1 = 2100
+ch3u1= us
+ch3e = 3b
+ch3t2 = 10
+ch3u2 = us
+ch3pulse = normal pulse
+ch3freq = 10
+ch3trig = Negative
+ch3cb = False
+#
+#		channel 4
+ch4b = 1b
+ch4t1 = 135
+ch4u1= us
+ch4e = 4b
+ch4t2 = 60
+ch4u2 = us
+ch4pulse = normal pulse
+ch4freq = 10
+ch4trig = Positive
+ch4cb = False
+#
+#		channel 5
+ch5b = 3b
+ch5t1 = -5
+ch5u1= us
+ch5e = 5b
+ch5t2 = 10
+ch5u2 = us
+ch5pulse = normal pulse
+ch5freq = 10
+ch5trig = Positive
+ch5cb = False
+#
+#		channel 6
+ch6b = 4b
+ch6t1 = 495
+ch6u1= us
+ch6e = 3b
+ch6t2 = -5
+ch6u2 = us
+ch6pulse = burst unit decelerator (+)
+ch6freq = 10
+ch6trig = Positive
+ch6cb = False
+#
+#		channel 7
+ch7b = 6b
+ch7t1 = 0
+ch7u1= us
+ch7e = 3b
+ch7t2 = -5
+ch7u2 = us
+ch7pulse = burst unit decelerator (-)
+ch7freq = 10
+ch7trig = Positive
+ch7cb = False
+#
+#		channel 8
+ch8b = 4b
+ch8t1 = 3677.3
+ch8u1= us
+ch8e = 8b
+ch8t2 = 301.5
+ch8u2 = us
+ch8pulse = normal pulse
+ch8freq = 10
+ch8trig = Positive
+ch8cb = False
+#
+#
+####################################################
+# LeCroy Scope settings
+####################################################
+#
+# see manual for doc
+#
+interpolatetype = 0
+enhancerestype = 0
+probeattenuation = 1
+bandwidth = 0
+tracemode = ON
+#
+timebase = 4e-7
+timeoffset = -7.8e-6
+scope_ip = 131.152.105.186
+scope_display = True
+#
+numberofsegments = 10
+samplemode = 2
+max_sample = 5e6
+#
+ch1_verticaloffset = 0.0
+ch1_verticalcoupling = D50
+ch1_verticalrange = 10.0
+ch1_invert = True
+ch1_cb = True
+ch1_scale = 50e-3
+#
+ch2_verticaloffset = 0.0
+ch2_verticalcoupling = D50
+ch2_verticalrange = 10.0
+ch2_invert = False
+ch2_cb = True
+ch2_scale = 500e-3
+#
+ch3_verticaloffset = 0.0
+ch3_verticalcoupling = D50
+ch3_verticalrange = 10.0
+ch3_invert = False
+ch3_cb = False
+ch3_scale = 50e-3
+#
+ch4_verticaloffset = 0.0
+ch4_verticalcoupling = D50
+ch4_verticalrange = 10.0
+ch4_invert = False
+ch4_cb = False
+ch4_scale = 50e-3
+#
+trig_level = 2.5
+trig_source = 4
+trig_type = Edge
+trig_slope = POS
+#
+scale_unit = V
+#
+# some things not implemented:
+# holdvalue1 = 4e-9
+# holdvalue2 = 6e-9
+# qualifiersource = 2
+# holdtype = 0
+# noise_filter = None
+#
+####################################################
+# PULSARE pulsed laser
+####################################################
+#
+pulsare_ipadress = 131.152.105.89
+pulsare_port = 65510
+wavelength = 17734.90
+#
+#
+####################################################
+# SPINCORE pulse blaster settings
+####################################################
+#
+# clock in Hz
+pb_clock=16e6
+#
+#
+####################################################
+# Scan window settings
+####################################################
+#
+bg_mode = None
+scan_ch = 3b
+rel_ch = 4b
+bg_ch = 4
+#
+scan_start = 1400
+scan_start_unit = us
+scan_stop = 2200
+scan_stop_unit = us
+scan_step = 2
+#
+signal_ch = channel 1
+reference_ch = channel 1
+#
+wlscan_start = 0
+wlscan_stop = 0
+wl_unit = cm-1
+#
+wl_step = 0
+#
+scan_directory = C:\\Users\Gruppe Willitsch\Desktop\data
+scan_file = 0703001
+scan_filetype = txt
+scan3dfile = .\input\scan3d.txt
+listscanfile = .\input\listscanfile.txt
+#
+mode = fundamental
+#
+# this is the end of the input file (do not remove this line)
